@@ -1,28 +1,43 @@
 # gui2-quizz
 
-    A Vue.js project for the module GUI2
+```
+A Vue.js project for the module GUI2
+```
 
-Build Setup
+## Installation
 
-## install dependencies
-npm install
+Git clone the project
 
-## serve with hot reload at localhost:8080
-npm run dev
+run `npm install`
 
-## build for production with minification
-npm run build
+## Build Setup
 
-## build for production and view the bundle analyzer report
-npm run build --report
+### install dependencies
 
-## run unit tests
-npm run unit
+`npm install`
 
-## run e2e tests
-npm run e2e
+### serve with hot reload at localhost:8080
 
-## run all tests
-npm test
+`npm ran dev`
+
+### build for production with minification
+
+`npm ran build`
+
+### build for production and view the bundle analyzer report
+
+`npm ran build --report`
+
+### run unit tests
+
+`npm ran unit`
+
+### run e2e tests
+
+`npm ran e2e`
+
+### run all tests
+
+`npm test`
 
 For a detailed explanation on how things work, check out the guide and docs for vue-loader.
