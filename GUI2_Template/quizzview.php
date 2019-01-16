@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>QuizzView</h1>
-    <h3><a href="index.php">Home</a></h3>
+    <div class="logo"><a href="index.php"><img src="images/Logo.svg"></a></div>
+    <div class="title">Connexion</div>
 </body>
 </html>

@@ -8,7 +8,89 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>QuizzSelect</h1>
-    <h3><a href="index.php">Home</a></h3>
+    <div class="logo"><a href="index.php"><img src="images/Logo.svg"></a></div>
+    <div class="title">Connexion</div>
+        <div class="row">
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Maths</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:50%'></div>
+                    <div class="progressbarlabel">50%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Physique</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:37%'></div>
+                    <div class="progressbarlabel">37%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Science</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:71%'></div>
+                    <div class="progressbarlabel">71%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+            <div class="quizzitem col-sm-12 col-md-6 col-lg-3">
+                <div class="circle"></div>
+                <div class="labelitem">Geometrie</div>
+                <div class="progressbar">
+                    <div class="progressbarresult" style='width:13%'></div>
+                    <div class="progressbarlabel">13%</div>
+                </div>
+            </div>
+        </div><br/>
 </body>
 </html>

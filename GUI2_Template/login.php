@@ -10,7 +10,7 @@
 <body>
     <div class="logo"><a href="index.php"><img src="images/Logo.svg"></a></div>
     <div class="title">Connexion</div>
-    <form class="form" method="post">
+    <fom class="form" method="post">
         <div class="row">
             <div class="col-sm-0 col-md-1 col-lg-3"></div>
             <div class="col-sm-12 col-md-10 col-lg-6">Pseudo<br/><input class="forminput" type="text" name="pseudo"></div>
@@ -25,6 +25,11 @@
             <div class="col-sm-0 col-md-1 col-lg-3"></div>
             <div class="col-sm-12 col-md-5 col-lg-3"><button class="formbutton" type="button" name="button">Connexion</button></div>
             <div class="col-sm-12 col-md-5 col-lg-3"><button class="formbutton" type="button" name="button">Page d'inscription</button></div>
+            <div class="col-sm-0 col-md-1 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-0 col-md-1 col-lg-3"></div>
+            <div class="col-sm-12 col-md-10 col-lg-6"><button class="formbutton" type="button" name="button">Invité</button></div>
             <div class="col-sm-0 col-md-1 col-lg-3"></div>
         </div>
     </form>
