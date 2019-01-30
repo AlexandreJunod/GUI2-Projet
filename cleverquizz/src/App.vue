@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <listQuiz></listQuiz>
   </div>
 </template>
 
 <script>
+import listQuiz from "./components/listQuiz"
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    listQuiz
+  }
 }
 </script>
 
