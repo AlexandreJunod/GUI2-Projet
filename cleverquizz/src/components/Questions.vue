@@ -29,51 +29,8 @@ export default {
       fin: false,
       index: 0,
       score: 0,
-      id: "5c3f45e155a8180004b47aea",
-      title: "Quizz Géométrie",
-      description: "Questions sur les formes et volumes",
-      created_by: "amr",
-      questions: [
-        {
-            id:"5c3f0c696f912a0004c01251",
-            question:"Combien de côtés possède un cube",
-            image:"test.png",
-            answers:[{
-                name:"Six",
-                value:false
-            },
-            {
-                name:"Quatre",
-                value:true
-            }]
-        },
-        {
-            id:"5c3f0c696f912a0004c012324",
-            question:"Combien de côtés possède un triangle",
-            image:"test.png",
-            answers:[{
-                name:"Deux",
-                value:false
-            },
-            {
-                name:"Trois",
-                value:true
-            }]
-        },
-        {
-            id:"5c3f0c696f912a0004c012324",
-            question:"Combien de côtés possède un cercle",
-            image:"test.png",
-            answers:[{
-                name:"Un",
-                value:false
-            },
-            {
-                name:"Zéro",
-                value:true
-            }]
-        },
-      ]
+      questions: [],
+      answers: [],
     }
   },
   methods: {
@@ -91,7 +48,17 @@ export default {
     recommencer: function() {
         this.fin = this.index = this.score = 0;
     },
-  }
+    fetchData () {
+              axios.get('http://awa-quizz.herokuapp.com/api/quizzes/'+ this.$route.params.id, {
+                  headers: { 'quizz-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0IiwicGFzc3dvcmQiOiIkcGJrZGYyLXNoYTI1NiQyMDAwMCRjNjRWd3RnN0IuQThKeVJrN1AzL1h3JG9BRDloUnVEQTVkWVpKR1Y2cDNpdDBzYVFqdlFBemFZbi9wNW1kSGRDbDQifQ.P-KfTO8nq5oQNC_bIAY5VKOeNLyNbGE-gGrf0oIKQjc'
+                        }
+                }).then((response) => {
+                        this.questions =response.data.questions;
+                        this.answers =response.data.questions.answers;
+              })
+          }
+  },
+
 }
 </script>
 

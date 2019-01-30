@@ -2,11 +2,8 @@
   <div id="app">
 <nav class="navbar navbar-expand-lg">
   <ul class="navbar-nav">
-    <li class="active">
-      <a href="#" class="nav-link">Accueil</a>
-    </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">Login</a>
+        <router-link class="nav-link" to="/">Accueil</router-link>
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link">Sign up</a>

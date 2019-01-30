@@ -1,11 +1,10 @@
 <template>
-    <div>
+    <div id="listQuiz" v-cloak>
     <div class="row">
-        <div class="quizzitem col-sm-12 col-md-6 col-lg-3" v-for="(value) in quizzes" :key="value.key">
-            <div class="title">{{value.title}}</div>
-            <router-link :to="{ name: 'Questions', params: { id: value.id } }">
-                <div class="circle" v-bind:style="{ 'background-image': 'url('+value.image+')'}"></div>
-            </router-link>
+        <div class="quizzitem col-sm-12 col-md-6 col-lg-3" v-for="value in quizzes" :key="value.id">
+            <h1 class="title">{{value.title}}</h1>
+                <div v-on:click="goQuestions(value.id)" class="circle" v-bind:style="{ 'background-image': 'url('+value.image+')'}"></div>
+
             <div class="labelitem">{{value.description}}</div>
             <div class="progressbar">
                 <div class="progressbarresult" style='width:50%'></div>
@@ -18,38 +17,40 @@
 </template>
 
 <script>
-    export default {
-        name: "app",
-        data: function() {
-            return {
-                quizzes: [
-                {
-                    title: "Quizz Géométrie",
-                    image: "https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/01075158/p2.png",
-                    description: "Questions sur les formes et volumes",
-                    created_by: {
-                        id: "5c3ef507ae97ab0004daad7c",
-                        username: "amr"
-                    },
-                    number_participants: 0,
-                    id: "5c3f45e155a8180004b47aea"
-                },
-                {
-                    title: "Quizz Web Bases",
-                    image: "http://managedsolution.com/wp-content/uploads/2015/12/web-development-managed-solution.jpg",
-                    description: "Questions de base sur le développement web",
-                    created_by: {
-                        id: "5c3ef507ae97ab0004daad7c",
-                        username: "amr"
-                    },
-                    number_participants: 2,
-                    id: "5c4592fb28a39b00045f1945"
-                }
-            ]
-            }
+    import Vue from 'Vue'
+    import axios from 'axios'
+    import VueAxios from 'vue-axios'
 
-        }
-    }
+    Vue.use(VueAxios, axios)
+    export default {
+        name: "listQuiz",
+        data: function(){
+            return {
+                quizzes: []
+            }
+            
+        },
+        methods: {
+        fetchData () {
+              axios.get('http://awa-quizz.herokuapp.com/api/quizzes', {
+                  headers: { 'quizz-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0IiwicGFzc3dvcmQiOiIkcGJrZGYyLXNoYTI1NiQyMDAwMCRjNjRWd3RnN0IuQThKeVJrN1AzL1h3JG9BRDloUnVEQTVkWVpKR1Y2cDNpdDBzYVFqdlFBemFZbi9wNW1kSGRDbDQifQ.P-KfTO8nq5oQNC_bIAY5VKOeNLyNbGE-gGrf0oIKQjc'
+                        }
+                }).then((response) => {
+                        this.quizzes =response.data.quizzes;
+              })
+          },
+          goQuestions : function(index) {
+                this.$router.push({name:'Questions',params:{id:index}})
+                console.log(index)
+            },
+  },
+  
+
+  mounted() {
+    this.fetchData()
+  }
+}
+    
 </script>
 
 <style scoped>
@@ -79,6 +80,7 @@
         margin-bottom: 20px;
         opacity: 0.6;
         transition: 0.3s;
+        cursor: pointer;
     }
     .circle:hover {
         opacity: 1;
@@ -96,7 +98,7 @@
         border-radius: 25px;
         height: 25px;
         background-color: #fcc64c;
-        margin-bottom: 50px;
+        margin-bottom: 300px;
         position: relative;
     }
 
