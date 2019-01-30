@@ -1,16 +1,16 @@
 <template>
-  <div id="app" class="container">
+  <div index="app" class="container">
   <h1 class="mb-4">Un petit quiz, theme : {{ title }}</h1>
   <b-alert v-if="fin" show>Votre score est : {{ score }} / {{ questions.length }}</b-alert>
     <b-alert show>Créer par {{ created_by }}</b-alert>
-    <b-card :header="questions[id].question"
+    <b-card :header="questions[index].question"
             header-tag="header">
       <b-list-group>
         <b-list-group-item
           button
-          v-for="(item, id) in questions[id].answers"
-          :key="item.id"
-          @click="action(id, item.value)">
+          v-for="(item, index) in questions[index].answers"
+          :key="item.index"
+          @click="action(index, item.value)">
           {{ item.name }}
         </b-list-group-item>
       </b-list-group>
@@ -25,15 +25,15 @@ export default {
   data: function () {
     return {
       fin: false,
-      id: 0,
+      index: 0,
       score: 0,
-      index: "5c3f45e155a8180004b47aea",
+      id: "5c3f45e155a8180004b47aea",
       title: "Quizz Géométrie",
       description: "Questions sur les formes et volumes",
       created_by: "amr",
       questions: [
         {
-            id:"5c3f0c696f912a0004c01251",
+            index:"5c3f0c696f912a0004c01251",
             question:"Combien de côtés possède un cube",
             image:"test.png",
             answers:[{
@@ -46,7 +46,7 @@ export default {
             }]
         },
         {
-            id:"5c3f0c696f912a0004c012324",
+            index:"5c3f0c696f912a0004c012324",
             question:"Combien de côtés possède un triangle",
             image:"test.png",
             answers:[{
@@ -59,7 +59,7 @@ export default {
             }]
         },
         {
-            id:"5c3f0c696f912a0004c012324",
+            index:"5c3f0c696f912a0004c012324",
             question:"Combien de côtés possède un cercle",
             image:"test.png",
             answers:[{
@@ -75,20 +75,20 @@ export default {
     }
   },
   methods: {
-    action: function(id, value) {
+    action: function(index, value) {
         if(value && this.questions.length > this.score)
         {
             this.score++;
         }
 
-      if(this.id == this.questions.length - 1) {
+      if(this.index == this.questions.length - 1) {
         this.fin = true;
       } else {
-        this.id++;
+        this.index++;
       }
   },
     recommencer: function() {
-        this.fin = this.id = this.score = 0;
+        this.fin = this.index = this.score = 0;
     }
   }
 }
