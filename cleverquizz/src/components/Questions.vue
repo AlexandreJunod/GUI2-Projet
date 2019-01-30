@@ -89,7 +89,7 @@ export default {
   },
     recommencer: function() {
         this.fin = this.index = this.score = 0;
-    }
+    },
   }
 }
 </script>

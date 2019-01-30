@@ -1,23 +1,86 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+<nav class="navbar navbar-expand-lg">
+  <ul class="navbar-nav">
+    <li class="active">
+      <a href="#" class="nav-link">Accueil</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Login</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link">Sign up</a>
+    </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item avatar">
+          <img src="../images/logo.svg" class="rounded" alt="avatar image" height="55">
+      </li>
+    </ul>
+</nav>
+    <h1>Hello, welcome to the quizzes</h1>
+    <listQuiz></listQuiz>
   </div>
 </template>
 
 <script>
+import listQuiz from "./components/listQuiz"
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    listQuiz
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Railway';
+  src: local('../font/Railway.otf');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.navbar-brand {
+  width: 150px;
+  display: relative;
+  right: 200px;
+}
+h1{
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+.nav-item::after{
+    content:'';
+    display:block;
+    width:0px;
+    height:4px;
+    background:#86d2f7;
+    transition: 0.2s;
+    margin-top:-10px;
+}
+
+.nav-item:hover::after{width:100%;}
+
+
+.nav-link{padding:15px 5px;transition:0.2s;}
+
+.navbar-nav .nav-link {
+    
+    color:#000;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.navbar-nav .active > .nav-link{
+  
+    width:100%;
+    height:51px;
+    
+  border-bottom: .25rem solid transparent;
+  border-bottom-color: #86d2f7;
+   
 }
 </style>
