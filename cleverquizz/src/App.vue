@@ -15,19 +15,16 @@
       </li>
     </ul>
 </nav>
-    <h1>Hello, welcome to the quizzes</h1>
-    <listQuiz></listQuiz>
+	<router-view/>
   </div>
 </template>
 
 <script>
-import listQuiz from "./components/listQuiz"
+
 
 export default {
   name: 'App',
-  components: {
-    listQuiz
-  }
+
 }
 </script>
 

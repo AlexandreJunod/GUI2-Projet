@@ -22,6 +22,9 @@
 </template>
 
 <script>
+    import Vue from 'Vue'
+    import axios from 'axios'
+    import VueAxios from 'vue-axios'
 export default {
   name: 'Questions',
   data: function () {
@@ -44,7 +47,7 @@ export default {
         element.classList.add("right");*/
         var element = document.getElementById("false");
         element.classList.add("wrong");
-  },
+    },
     recommencer: function() {
         this.fin = this.index = this.score = 0;
     },
@@ -55,10 +58,26 @@ export default {
                 }).then((response) => {
                         this.questions =response.data.questions;
                         this.answers =response.data.questions.answers;
+                        console.log(this.questions)
               })
           }
   },
 
+    next: function() {
+        if(this.index == this.questions.length - 1) {
+            this.$router.push({path: '/Result/'+this.score+'/'+this.questions.length});
+        }
+        else
+        {
+            this.index++;
+        }
+    },
+    previous: function() {
+    if(this.index > 0)
+    {
+        this.index--;
+    }
+  }
 }
 </script>
 

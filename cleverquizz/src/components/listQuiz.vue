@@ -1,5 +1,6 @@
 <template>
     <div id="listQuiz" v-cloak>
+    <h1>Hello, welcome to the quizzes</h1>
     <div class="row">
         <div class="quizzitem col-sm-12 col-md-6 col-lg-3" v-for="value in quizzes" :key="value.id">
             <h1 class="title">{{value.title}}</h1>
@@ -40,7 +41,7 @@
               })
           },
           goQuestions : function(index) {
-                this.$router.push({name:'Questions',params:{id:index}})
+                 this.$router.push({path: '/Questions/'+index });
                 console.log(index)
             },
   },

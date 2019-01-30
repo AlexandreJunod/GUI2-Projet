@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Questions from '@/components/Questions'
 import Result from '@/components/Result'
+import listQuiz from '@/components/listQuiz'
+
 
 
 
@@ -11,7 +13,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
   {
-    path: '/:id',
+    path: '/Questions/:id',
     name: 'Questions',
     component: Questions
   },
@@ -19,6 +21,11 @@ export default new Router({
     path: '/Result/:score/:lenght',
     name: 'Result',
     component: Result
+  },
+  {
+    path: '/',
+    name: 'listQuiz',
+    component: listQuiz
   }
   ]
 })
