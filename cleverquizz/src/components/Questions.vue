@@ -9,7 +9,7 @@
           button
           class="select"
           v-for="(item, index) in questions[index].answers"
-          id="item.value"
+          :id="item.value"
           :key="item.index"
           @click="action(index, item.value)">
           {{ item.name }}
@@ -83,11 +83,10 @@ export default {
             this.score++;
         }
 
-
-        var elementright = document.getElementById("true");
-        elementright.classList.add("right");
-        var elementwrong = document.getElementById("false");
-        elementwrong.classList.add("wrong");
+        /*var element = document.getElementById("true");
+        element.classList.add("right");*/
+        var element = document.getElementById("false");
+        element.classList.add("wrong");
   },
     recommencer: function() {
         this.fin = this.index = this.score = 0;
