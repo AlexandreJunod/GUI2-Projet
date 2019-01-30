@@ -57,7 +57,7 @@
         font-size: 50px;
         color: #86d2f7;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
 
     .quizzitem {
@@ -76,12 +76,19 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        margin-bottom: 20px;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+    .circle:hover {
+        opacity: 1;
     }
 
     .labelitem {
         width: 100%;
         text-align: center;
         margin-bottom: 10px;
+        font-size: 20px;
     }
 
     .progressbar {
