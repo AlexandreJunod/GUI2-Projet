@@ -1,27 +1,29 @@
 <template>
   <div index="app" class="container">
   <h1 class="mb-4">Un petit quiz, theme : {{ title }}</h1>
-  <b-alert v-if="fin" show>Votre score est : {{ score }} / {{ questions.length }}</b-alert>
     <b-alert show>Créer par {{ created_by }}</b-alert>
     <b-card :header="questions[index].question"
             header-tag="header">
       <b-list-group>
         <b-list-group-item
           button
+          class="select"
           v-for="(item, index) in questions[index].answers"
+          :id="item.value"
           :key="item.index"
           @click="action(index, item.value)">
           {{ item.name }}
         </b-list-group-item>
       </b-list-group>
-      <b-button v-if="fin" @click="recommencer" class="mt-4">Recommencer !</b-button>
+      <b-button @click="previous" class="mt-4">Précédent</b-button>
+      <b-button @click="next" class="mt-4">Suivant</b-button>
   </b-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'Questions',
   data: function () {
     return {
       fin: false,
@@ -33,7 +35,7 @@ export default {
       created_by: "amr",
       questions: [
         {
-            index:"5c3f0c696f912a0004c01251",
+            id:"5c3f0c696f912a0004c01251",
             question:"Combien de côtés possède un cube",
             image:"test.png",
             answers:[{
@@ -46,7 +48,7 @@ export default {
             }]
         },
         {
-            index:"5c3f0c696f912a0004c012324",
+            id:"5c3f0c696f912a0004c012324",
             question:"Combien de côtés possède un triangle",
             image:"test.png",
             answers:[{
@@ -59,7 +61,7 @@ export default {
             }]
         },
         {
-            index:"5c3f0c696f912a0004c012324",
+            id:"5c3f0c696f912a0004c012324",
             question:"Combien de côtés possède un cercle",
             image:"test.png",
             answers:[{
@@ -81,11 +83,10 @@ export default {
             this.score++;
         }
 
-      if(this.index == this.questions.length - 1) {
-        this.fin = true;
-      } else {
-        this.index++;
-      }
+        /*var element = document.getElementById("true");
+        element.classList.add("right");*/
+        var element = document.getElementById("false");
+        element.classList.add("wrong");
   },
     recommencer: function() {
         this.fin = this.index = this.score = 0;
@@ -102,5 +103,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.select:hover{
+    background-color: #dfdfdf;
+}
+
+.right{
+    color: white;
+    background-color: #04dcaf;
+    border-color: #00a885;
+}
+
+.wrong{
+    color: white;
+    background-color: #f48080;
+    border-color: #f26060;
 }
 </style>
