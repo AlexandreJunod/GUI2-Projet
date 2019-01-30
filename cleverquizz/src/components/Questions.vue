@@ -7,7 +7,9 @@
       <b-list-group>
         <b-list-group-item
           button
+          class="select"
           v-for="(item, index) in questions[index].answers"
+          id="item.value"
           :key="item.index"
           @click="action(index, item.value)">
           {{ item.name }}
@@ -80,6 +82,12 @@ export default {
         {
             this.score++;
         }
+
+
+        var elementright = document.getElementById("true");
+        elementright.classList.add("right");
+        var elementwrong = document.getElementById("false");
+        elementwrong.classList.add("wrong");
   },
     recommencer: function() {
         this.fin = this.index = this.score = 0;
@@ -111,5 +119,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.select:hover{
+    background-color: #dfdfdf;
+}
+
+.right{
+    color: white;
+    background-color: #04dcaf;
+    border-color: #00a885;
+}
+
+.wrong{
+    color: white;
+    background-color: #f48080;
+    border-color: #f26060;
 }
 </style>
