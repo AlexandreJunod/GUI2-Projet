@@ -6,6 +6,9 @@
         <router-link class="nav-link" to="/">Accueil</router-link>
     </li>
     <li class="nav-item">
+        <a href="#" class="nav-link">Login</a>
+    </li>
+    <li class="nav-item">
         <a href="#" class="nav-link">Sign up</a>
     </li>
     </ul>

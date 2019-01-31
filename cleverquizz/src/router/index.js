@@ -11,6 +11,7 @@ import listQuiz from '@/components/listQuiz'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
   {
     path: '/Questions/:id',
@@ -18,7 +19,7 @@ export default new Router({
     component: Questions
   },
   {
-    path: '/Result/:score/:lenght',
+    path: '/Result/:score/:length/:perc',
     name: 'Result',
     component: Result
   },

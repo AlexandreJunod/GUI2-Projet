@@ -31,6 +31,9 @@
             }
             
         },
+        mounted() {
+            this.fetchData()
+        },
         methods: {
         fetchData () {
               axios.get('http://awa-quizz.herokuapp.com/api/quizzes', {
@@ -42,19 +45,16 @@
           },
           goQuestions : function(index) {
                  this.$router.push({path: '/Questions/'+index });
-                console.log(index)
             },
   },
   
 
-  mounted() {
-    this.fetchData()
-  }
+  
 }
     
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .title {
         font-size: 50px;
         color: #86d2f7;
@@ -82,9 +82,11 @@
         opacity: 0.6;
         transition: 0.3s;
         cursor: pointer;
-    }
-    .circle:hover {
-        opacity: 1;
+    
+        &:hover {
+            opacity: 1;
+        }
+        
     }
 
     .labelitem {
@@ -101,23 +103,25 @@
         background-color: #fcc64c;
         margin-bottom: 300px;
         position: relative;
-    }
+    
 
-    .progressbar .progressbarresult {
-        height: 25px;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
-        background-color: #00a885;
-        position: absolute;
-    }
+        .progressbarresult {
+            height: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            background-color: #00a885;
+            position: absolute;
+        }
+    
 
-    .progressbar .progressbarlabel {
-        height: 25px;
-        width: 100%;
-        position: absolute;
-        text-align: center;
-        font-weight: bold;
-        color: white;
+        .progressbarlabel {
+            height: 25px;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
     }
     img{
         text-align: center;
