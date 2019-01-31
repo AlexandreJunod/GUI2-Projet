@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import Questions from '@/components/Questions'
 import Result from '@/components/Result'
 import listQuiz from '@/components/listQuiz'
-
-
+import Login from '@/components/login'
 
 
 
@@ -27,6 +26,11 @@ export default new Router({
     path: '/',
     name: 'listQuiz',
     component: listQuiz
-  }
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login
+},
   ]
 })

@@ -43,8 +43,7 @@ export default {
     action: function(value) {
       if (value && this.answers.length > this.score) {
         this.score++;
-      }
-
+      } 
       
     },
     recommencer: function() {
