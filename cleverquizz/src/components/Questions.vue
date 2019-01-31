@@ -1,5 +1,6 @@
 <template>
   <div index="app" class="container">
+    {{this.$route.params.id}}
   <h1 class="mb-4">Un petit quiz, theme : {{ title }}</h1>
     <b-alert show>Créer par {{ created_by }}</b-alert>
     <b-card :header="questions[index].question"
@@ -82,15 +83,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
 .select:hover{
     background-color: #dfdfdf;
 }

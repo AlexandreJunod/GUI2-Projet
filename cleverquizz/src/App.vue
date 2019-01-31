@@ -11,7 +11,7 @@
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item avatar">
-          <img src="../images/logo.svg" class="rounded" alt="avatar image" height="55">
+          <img src="./assets/logo.svg" class="rounded" alt="avatar image" height="55">
       </li>
     </ul>
 </nav>
