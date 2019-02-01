@@ -18,9 +18,9 @@ export default {
   methods: {
     submit: function() {
       //var perc = localStorage.getItem($("#perc").text());
-      var perc = localStorage.setItem('$("#perc").text()', this.$route.params.perc)
+      var perc = localStorage.setItem('', this.$route.params.perc)
       console.log(perc)
-      //this.$router.push("/");
+      this.$router.push("/");
     }
   }
 };
