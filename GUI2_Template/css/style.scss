@@ -1,0 +1,94 @@
+$primary-color : #fcc64c;
+$secondary-color : #86d2f7;
+$greenlight: #04dcaf;
+$greendark: #00a885;
+$redlight: #f48080;
+$reddark: #f26060;
+
+body{
+    margin: 50px;
+    font-family: Raleway;
+}
+
+.logo{
+    width: 190px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-size: 50px;
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.form{
+    font-size: 25px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    .forminput{
+        width: 100%;
+    }
+
+    .formbutton{
+        width: 100%;
+        height:40px;
+        border: 0px;
+        background-color: $primary-color;
+        color: white;
+        padding: 0px;
+        margin-top: 10px;
+    }
+}
+
+.quizzitem{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 100%;
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+    background-color: $secondary-color;
+    margin-bottom: 10px;
+}
+
+.labelitem{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.progressbar
+{
+    width: 60%;
+    border-radius: 25px;
+    height: 25px;
+    background-color: $primary-color;
+    margin-bottom: 50px;
+    position: relative;
+
+    .progressbarresult
+    {
+        height: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: $greendark;
+        position: absolute;
+    }
+
+    .progressbarlabel{
+        height: 25px;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+}
