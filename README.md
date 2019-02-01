@@ -1,6 +1,7 @@
 # gui2-quizz
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     A Vue.js project for the module GUI2
 
 Build Setup
@@ -28,6 +29,8 @@ npm test
 
 For a detailed explanation on how things work, check out the guide and docs for vue-loader.
 =======
+=======
+>>>>>>> 58ac918f3c18cdc6c4ef8d8d5c11aed750a408d9
 ```
 A Vue.js project for the module GUI2
 ```
@@ -69,4 +72,7 @@ run `npm install`
 `npm test`
 
 For a detailed explanation on how things work, check out the guide and docs for vue-loader.
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 58ac918f3c18cdc6c4ef8d8d5c11aed750a408d9
