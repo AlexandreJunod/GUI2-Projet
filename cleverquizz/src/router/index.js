@@ -4,6 +4,8 @@ import Questions from '@/components/Questions'
 import Result from '@/components/Result'
 import listQuiz from '@/components/listQuiz'
 import Login from '@/components/login'
+import Register from '@/components/register'
+
 
 
 
@@ -31,6 +33,11 @@ export default new Router({
     path: "/login",
     name: "login",
     component: Login
+},
+{
+  path: "/register",
+  name: "Register",
+  component: Register
 },
   ]
 })

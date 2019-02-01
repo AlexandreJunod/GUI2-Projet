@@ -1,7 +1,22 @@
 <template>
   <div class="container">
-    <h1>Login</h1>
+    <h1>Inscription</h1>
     <b-form class="form" @submit="login()">
+         <b-form-group
+        id="groupEmail"
+        label="Email :"
+        label-for="email"
+      >
+        <b-form-input
+          id="inputEmail"
+          type="text"
+          name="email"
+          class="forminput"
+          v-model="input.username"
+          required
+          placeholder="Email"
+        ></b-form-input>
+      </b-form-group>
       <b-form-group
         id="groupUsername"
         label="Username :"

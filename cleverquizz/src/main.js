@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
+import VueLocalStorage from 'vue-localstorage'
+
+Vue.use(VueLocalStorage)
 
 Vue.use(BootstrapVue);
 

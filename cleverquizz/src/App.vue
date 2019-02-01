@@ -9,15 +9,16 @@
         <a href="/login" class="nav-link">Login</a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">Registration</a>
+        <a href="/register" class="nav-link">Registration</a>
     </li>
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item avatar">
-          <img src="./assets/logo.svg" class="rounded" alt="avatar image" height="55">
+          <img src="./assets/logo.svg" class="rounded" alt="avatar image" height="50">
       </li>
     </ul>
 </nav>
+<div class="logo"><a href="/"><img src="./assets/Logo.svg"></a></div>
 	<router-view/>
   </div>
 </template>
@@ -79,5 +80,11 @@ h1{
   border-bottom: .25rem solid transparent;
   border-bottom-color: #86d2f7;
    
+}
+.logo {
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 </style>
